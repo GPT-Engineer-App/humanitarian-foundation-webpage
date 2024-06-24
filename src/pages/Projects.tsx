@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, Image, VStack, Flex, Progress, Link, Icon } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Flex, Progress, Link, Icon } from "@chakra-ui/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Projects: React.FC = () => {
