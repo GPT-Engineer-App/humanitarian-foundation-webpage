@@ -39,7 +39,7 @@ const Index: React.FC = () => {
       {/* Featured Projects */}
       <Box py={10} textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Featured Projects</Heading>
-        <Flex justify="center" wrap="wrap" spacing={10}>
+        <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
             <Image src="/images/project1.jpg" alt="Project 1" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Clean Water Initiative</Heading>
@@ -61,7 +61,7 @@ const Index: React.FC = () => {
       {/* Testimonials */}
       <Box py={10} bg="gray.100" textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Testimonials</Heading>
-        <Flex justify="center" wrap="wrap" spacing={10}>
+        <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="left">
             <Icon as={FaQuoteLeft} boxSize={6} color="teal.500" />
             <Text mt={2}>"HUFIDA's programs have transformed our community. We now have access to clean water and better education for our children."</Text>
@@ -82,7 +82,7 @@ const Index: React.FC = () => {
 
       {/* Footer */}
       <Box py={10} bg="gray.800" color="white" textAlign="center">
-        <Flex justify="center" wrap="wrap" spacing={10}>
+        <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
             <Heading as="h3" size="md" mb={4}>Contact Us</Heading>
             <Text>1234 HUFIDA Street</Text>
