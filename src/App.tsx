@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import GetInvolved from "./pages/GetInvolved";
 import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
+import News from "./pages/News";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Route path="/about-us" element={<AboutUs />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/get-involved" element={<GetInvolved />} />
+      <Route path="/news" element={<News />} />
       </Routes>
     </Router>
   );
