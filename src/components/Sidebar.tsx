@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, VStack, Link, Icon, Text } from "@chakra-ui/react";
+import { Box, VStack, Link, Icon } from "@chakra-ui/react";
 import { FaHome, FaInfoCircle, FaProjectDiagram, FaHandsHelping, FaNewspaper, FaEnvelope } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
