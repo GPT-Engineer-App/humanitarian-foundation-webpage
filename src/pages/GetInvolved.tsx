@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Image, Checkbox } from "@chakra-ui/react";
 
 const GetInvolved: React.FC = () => {
   return (
