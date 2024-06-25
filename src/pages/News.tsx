@@ -20,10 +20,10 @@ import {
   ModalContent,
   ModalBody,
   IconButton,
+  Image,
 } from "@chakra-ui/react";
 import { FaTimes as CloseIcon } from "react-icons/fa";
-import Head from "next/head";
-import Image from "next/image";
+import { Helmet } from "react-helmet";
 
 const News: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,7 +41,7 @@ const News: React.FC = () => {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>HUFIDA News - Latest Updates and Press Releases</title>
         <meta
           name="description"
@@ -51,7 +51,7 @@ const News: React.FC = () => {
           name="keywords"
           content="HUFIDA, news, blog, press releases, sustainable development, Africa"
         />
-      </Head>
+      </Helmet>
       <Box p={4}>
         <Heading as="h1" size="2xl" mb={6} textAlign="center">
           News

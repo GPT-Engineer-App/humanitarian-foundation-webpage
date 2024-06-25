@@ -1,16 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Box, Heading, Text, VStack, FormControl, FormLabel, Input, Textarea, Button, HStack, Icon, Link } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
     <Box p={4}>
-      <Helmet>
-        <title>Contact HUFIDA - Get in Touch with Us</title>
-        <meta name="description" content="Contact HUFIDA for inquiries about our sustainable development projects, volunteering opportunities, or donations." />
-        <meta name="keywords" content="HUFIDA, contact, sustainable development, volunteering, donations" />
-      </Helmet>
+      
 
       {/* Contact Form */}
       <Box mb={10}>

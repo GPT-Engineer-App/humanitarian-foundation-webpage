@@ -1,16 +1,15 @@
 import React from "react";
-import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Checkbox } from "@chakra-ui/react";
-import Image from 'next/image';
-import Head from 'next/head';
+import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Checkbox, Image } from "@chakra-ui/react";
+import { Helmet } from 'react-helmet';
 
 const GetInvolved: React.FC = () => {
   return (
     <Box p={4}>
-      <Head>
+      <Helmet>
         <title>Get Involved with HUFIDA - Volunteer and Donate</title>
         <meta name="description" content="Join HUFIDA's mission by volunteering or donating. Make a difference in sustainable development, education, and healthcare in Africa." />
         <meta name="keywords" content="HUFIDA, volunteer, donate, sustainable development, education, healthcare, Africa" />
-      </Head>
+      </Helmet>
 
       {/* Volunteer Opportunities */}
       <Box mb={10}>
@@ -70,17 +69,17 @@ const GetInvolved: React.FC = () => {
         <Heading as="h2" size="xl" mb={4} textAlign="center">Volunteer Testimonials</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/volunteer1.jpg" alt="John Doe, Volunteer 1" width={150} height={150} style={{ borderRadius: '50%' }} />
+            <Image src="/images/volunteer1.jpg" alt="John Doe, Volunteer 1" boxSize="150px" borderRadius="full" />
             <Text mt={2} fontWeight="bold">John Doe</Text>
             <Text>"Volunteering with HUFIDA has been an incredibly rewarding experience. I've had the opportunity to make a real difference in my community."</Text>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/volunteer2.jpg" alt="Jane Smith, Volunteer 2" width={150} height={150} style={{ borderRadius: '50%' }} />
+            <Image src="/images/volunteer2.jpg" alt="Jane Smith, Volunteer 2" boxSize="150px" borderRadius="full" />
             <Text mt={2} fontWeight="bold">Jane Smith</Text>
             <Text>"The team at HUFIDA is amazing. They are dedicated, passionate, and truly care about the work they do. I'm proud to be a part of this organization."</Text>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/volunteer3.jpg" alt="Michael Johnson, Volunteer 3" width={150} height={150} style={{ borderRadius: '50%' }} />
+            <Image src="/images/volunteer3.jpg" alt="Michael Johnson, Volunteer 3" boxSize="150px" borderRadius="full" />
             <Text mt={2} fontWeight="bold">Michael Johnson</Text>
             <Text>"I've learned so much and met so many wonderful people through my volunteer work with HUFIDA. It's been a life-changing experience."</Text>
           </Box>
@@ -120,15 +119,15 @@ const GetInvolved: React.FC = () => {
         <Heading as="h2" size="xl" mb={4} textAlign="center">Impact Stories</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/impact1.jpg" alt="Impact Story 1" width={300} height={200} style={{ borderRadius: '8px' }} />
+            <Image src="/images/impact1.jpg" alt="Impact Story 1" boxSize="300px" borderRadius="md" />
             <Text mt={2}>Story 1: How your donations have made a difference.</Text>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/impact2.jpg" alt="Impact Story 2" width={300} height={200} style={{ borderRadius: '8px' }} />
+            <Image src="/images/impact2.jpg" alt="Impact Story 2" boxSize="300px" borderRadius="md" />
             <Text mt={2}>Story 2: Transforming lives through education.</Text>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/impact3.jpg" alt="Impact Story 3" width={300} height={200} style={{ borderRadius: '8px' }} />
+            <Image src="/images/impact3.jpg" alt="Impact Story 3" boxSize="300px" borderRadius="md" />
             <Text mt={2}>Story 3: Providing healthcare to those in need.</Text>
           </Box>
         </Flex>
@@ -159,21 +158,21 @@ const GetInvolved: React.FC = () => {
         </Text>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/event1.jpg" alt="Community Health Fair" width={300} height={200} style={{ borderRadius: '8px' }} />
+            <Image src="/images/event1.jpg" alt="Community Health Fair" boxSize="300px" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Community Health Fair</Heading>
             <Text mt={2}>Date: 25th Dec 2023</Text>
             <Text mt={2}>Location: City Park</Text>
             <Button colorScheme="teal" mt={2}>Learn More</Button>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/event2.jpg" alt="Educational Workshop" width={300} height={200} style={{ borderRadius: '8px' }} />
+            <Image src="/images/event2.jpg" alt="Educational Workshop" boxSize="300px" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Educational Workshop</Heading>
             <Text mt={2}>Date: 15th Jan 2024</Text>
             <Text mt={2}>Location: Community Center</Text>
             <Button colorScheme="teal" mt={2}>Learn More</Button>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Image src="/images/event3.jpg" alt="Fundraising Gala" width={300} height={200} style={{ borderRadius: '8px' }} />
+            <Image src="/images/event3.jpg" alt="Fundraising Gala" boxSize="300px" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Fundraising Gala</Heading>
             <Text mt={2}>Date: 10th Feb 2024</Text>
             <Text mt={2}>Location: Grand Hall</Text>

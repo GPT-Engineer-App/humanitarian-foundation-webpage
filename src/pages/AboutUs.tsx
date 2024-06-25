@@ -1,16 +1,15 @@
 import React from "react";
-import { Box, Heading, Text, VStack, Flex } from "@chakra-ui/react";
-import Head from "next/head";
-import Image from "next/image";
+import { Box, Heading, Text, VStack, Flex, Image } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 
 const AboutUs: React.FC = () => {
   return (
     <>
-      <Head>
+      <Helmet>
         <title>About HUFIDA - Our Mission and Team</title>
         <meta name="description" content="Learn about HUFIDA's mission, our dedicated team, and our vision for sustainable development in Africa." />
         <meta name="keywords" content="HUFIDA, sustainable development, Africa, mission, team, healthcare, education" />
-      </Head>
+      </Helmet>
       <Box p={4}>
         {/* Our Story */}
         <Box mb={10}>
@@ -38,17 +37,17 @@ const AboutUs: React.FC = () => {
           <Heading as="h2" size="xl" mb={4} textAlign="center">Our Team</Heading>
           <Flex justify="center" wrap="wrap">
             <Box maxW="200px" m={4} textAlign="center">
-              <Image src="/images/team1.jpg" alt="David Lindh - Team Leader" borderRadius="full" width={150} height={150} />
+              <Image src="/images/team1.jpg" alt="David Lindh - Team Leader" borderRadius="full" boxSize="150px" />
               <Text mt={2} fontWeight="bold">David Lindh</Text>
               <Text>Role: Team Leader</Text>
             </Box>
             <Box maxW="200px" m={4} textAlign="center">
-              <Image src="/images/team2.jpg" alt="Babila Fofuleng - Project Manager" borderRadius="full" width={150} height={150} />
+              <Image src="/images/team2.jpg" alt="Babila Fofuleng - Project Manager" borderRadius="full" boxSize="150px" />
               <Text mt={2} fontWeight="bold">Babila Fofuleng</Text>
               <Text>Role: Project Manager</Text>
             </Box>
             <Box maxW="200px" m={4} textAlign="center">
-              <Image src="/images/team3.jpg" alt="Shima - Technical Lead" borderRadius="full" width={150} height={150} />
+              <Image src="/images/team3.jpg" alt="Shima - Technical Lead" borderRadius="full" boxSize="150px" />
               <Text mt={2} fontWeight="bold">Shima</Text>
               <Text>Role: Technical Lead</Text>
             </Box>
@@ -92,17 +91,17 @@ const AboutUs: React.FC = () => {
           <Heading as="h2" size="xl" mb={4} textAlign="center">Partners and Sponsors</Heading>
           <Flex justify="center" wrap="wrap">
             <Box maxW="200px" m={4} textAlign="center">
-              <Image src="/images/partner1.png" alt="Partner 1 - Partner Description" borderRadius="md" width={200} height={200} />
+              <Image src="/images/partner1.png" alt="Partner 1 - Partner Description" borderRadius="md" boxSize="200px" />
               <Text mt={2} fontWeight="bold">Partner 1</Text>
               <Text>Partner Description</Text>
             </Box>
             <Box maxW="200px" m={4} textAlign="center">
-              <Image src="/images/partner2.png" alt="Partner 2 - Partner Description" borderRadius="md" width={200} height={200} />
+              <Image src="/images/partner2.png" alt="Partner 2 - Partner Description" borderRadius="md" boxSize="200px" />
               <Text mt={2} fontWeight="bold">Partner 2</Text>
               <Text>Partner Description</Text>
             </Box>
             <Box maxW="200px" m={4} textAlign="center">
-              <Image src="/images/partner3.png" alt="Partner 3 - Partner Description" borderRadius="md" width={200} height={200} />
+              <Image src="/images/partner3.png" alt="Partner 3 - Partner Description" borderRadius="md" boxSize="200px" />
               <Text mt={2} fontWeight="bold">Partner 3</Text>
               <Text>Partner Description</Text>
             </Box>

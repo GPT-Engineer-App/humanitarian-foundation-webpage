@@ -1,17 +1,16 @@
 import React from "react";
-import { Box, Button, Flex, Heading, Text, VStack, HStack, Link, Icon, Divider } from "@chakra-ui/react";
-import { Image } from 'next/image';
-import Head from 'next/head';
+import { Box, Button, Flex, Heading, Text, VStack, HStack, Link, Icon, Divider, Image } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 import { FaDonate, FaHandsHelping, FaNewspaper, FaQuoteLeft, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Index: React.FC = () => {
   return (
     <Box>
-      <Head>
+      <Helmet>
         <title>HUFIDA - Empowering Communities, Transforming Lives</title>
         <meta name="description" content="The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives." />
         <meta name="keywords" content="HUFIDA, humanitarian, development, Africa, sustainable projects, education, healthcare" />
-      </Head>
+      </Helmet>
       {/* Hero Section */}
       <Box bgImage="url('/images/hero.jpg')" bgSize="cover" bgPos="center" color="white" textAlign="center" py={{ base: 10, md: 20 }}>
         <Heading as="h1" size="2xl" mb={4}>Empowering Communities, Transforming Lives</Heading>
