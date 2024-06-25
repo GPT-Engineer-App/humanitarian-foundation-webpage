@@ -91,84 +91,84 @@ export const useDeleteUser = () => {
     });
 };
 
-// Hooks for posts
-export const usePosts = () => useQuery({
-    queryKey: ['posts'],
-    queryFn: () => fromSupabase(supabase.from('posts').select('*')),
+// Hooks for volunteer opportunities
+export const useVolunteerOpportunities = () => useQuery({
+    queryKey: ['volunteerOpportunities'],
+    queryFn: () => fromSupabase(supabase.from('volunteer_opportunities').select('*')),
 });
 
-export const usePost = (id) => useQuery({
-    queryKey: ['post', id],
-    queryFn: () => fromSupabase(supabase.from('posts').select('*').eq('id', id).single()),
+export const useVolunteerOpportunity = (id) => useQuery({
+    queryKey: ['volunteerOpportunity', id],
+    queryFn: () => fromSupabase(supabase.from('volunteer_opportunities').select('*').eq('id', id).single()),
 });
 
-export const useAddPost = () => {
+export const useAddVolunteerOpportunity = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (newPost) => fromSupabase(supabase.from('posts').insert([newPost])),
+        mutationFn: (newVolunteerOpportunity) => fromSupabase(supabase.from('volunteer_opportunities').insert([newVolunteerOpportunity])),
         onSuccess: () => {
-            queryClient.invalidateQueries('posts');
+            queryClient.invalidateQueries('volunteerOpportunities');
         },
     });
 };
 
-export const useUpdatePost = () => {
+export const useUpdateVolunteerOpportunity = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (updatedPost) => fromSupabase(supabase.from('posts').update(updatedPost).eq('id', updatedPost.id)),
+        mutationFn: (updatedVolunteerOpportunity) => fromSupabase(supabase.from('volunteer_opportunities').update(updatedVolunteerOpportunity).eq('id', updatedVolunteerOpportunity.id)),
         onSuccess: () => {
-            queryClient.invalidateQueries('posts');
+            queryClient.invalidateQueries('volunteerOpportunities');
         },
     });
 };
 
-export const useDeletePost = () => {
+export const useDeleteVolunteerOpportunity = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (id) => fromSupabase(supabase.from('posts').delete().eq('id', id)),
+        mutationFn: (id) => fromSupabase(supabase.from('volunteer_opportunities').delete().eq('id', id)),
         onSuccess: () => {
-            queryClient.invalidateQueries('posts');
+            queryClient.invalidateQueries('volunteerOpportunities');
         },
     });
 };
 
-// Hooks for comments
-export const useComments = () => useQuery({
-    queryKey: ['comments'],
-    queryFn: () => fromSupabase(supabase.from('comments').select('*')),
+// Hooks for testimonials
+export const useTestimonials = () => useQuery({
+    queryKey: ['testimonials'],
+    queryFn: () => fromSupabase(supabase.from('testimonials').select('*')),
 });
 
-export const useComment = (id) => useQuery({
-    queryKey: ['comment', id],
-    queryFn: () => fromSupabase(supabase.from('comments').select('*').eq('id', id).single()),
+export const useTestimonial = (id) => useQuery({
+    queryKey: ['testimonial', id],
+    queryFn: () => fromSupabase(supabase.from('testimonials').select('*').eq('id', id).single()),
 });
 
-export const useAddComment = () => {
+export const useAddTestimonial = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (newComment) => fromSupabase(supabase.from('comments').insert([newComment])),
+        mutationFn: (newTestimonial) => fromSupabase(supabase.from('testimonials').insert([newTestimonial])),
         onSuccess: () => {
-            queryClient.invalidateQueries('comments');
+            queryClient.invalidateQueries('testimonials');
         },
     });
 };
 
-export const useUpdateComment = () => {
+export const useUpdateTestimonial = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (updatedComment) => fromSupabase(supabase.from('comments').update(updatedComment).eq('id', updatedComment.id)),
+        mutationFn: (updatedTestimonial) => fromSupabase(supabase.from('testimonials').update(updatedTestimonial).eq('id', updatedTestimonial.id)),
         onSuccess: () => {
-            queryClient.invalidateQueries('comments');
+            queryClient.invalidateQueries('testimonials');
         },
     });
 };
 
-export const useDeleteComment = () => {
+export const useDeleteTestimonial = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (id) => fromSupabase(supabase.from('comments').delete().eq('id', id)),
+        mutationFn: (id) => fromSupabase(supabase.from('testimonials').delete().eq('id', id)),
         onSuccess: () => {
-            queryClient.invalidateQueries('comments');
+            queryClient.invalidateQueries('testimonials');
         },
     });
 };
