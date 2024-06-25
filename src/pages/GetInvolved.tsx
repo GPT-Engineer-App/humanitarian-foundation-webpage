@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Image, Checkbox, Table, Thead, Tbody, Tr, Th, Td, useToast } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, useToast } from "@chakra-ui/react";
 import { useUsers, useAddVolunteerOpportunity, useUpdateVolunteerOpportunity, useDeleteVolunteerOpportunity, useVolunteerOpportunities, useAddTestimonial, useUpdateTestimonial, useDeleteTestimonial, useTestimonials } from "../integrations/supabase/index.js";
 
 const GetInvolved: React.FC = () => {
