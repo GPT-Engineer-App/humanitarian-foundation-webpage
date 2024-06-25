@@ -10,8 +10,29 @@ const GetInvolved: React.FC = () => {
         <Text fontSize="lg" textAlign="center" maxW="800px" mx="auto" mb={4}>
           Join us in making a difference! We offer various volunteer opportunities including community outreach, educational programs, and healthcare initiatives.
         </Text>
+        <Box maxW="800px" mx="auto">
+          <Heading as="h3" size="lg" mb={4}>Available Opportunities</Heading>
+          <VStack spacing={4} align="stretch">
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Heading as="h4" size="md">Community Outreach Volunteer</Heading>
+              <Text mt={2}>Help us reach out to local communities and spread awareness about our initiatives. Responsibilities include organizing events, distributing materials, and engaging with community members.</Text>
+            </Box>
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Heading as="h4" size="md">Educational Program Assistant</Heading>
+              <Text mt={2}>Assist in the planning and execution of educational programs for children and adults. Responsibilities include preparing materials, teaching, and providing support to participants.</Text>
+            </Box>
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Heading as="h4" size="md">Healthcare Initiative Volunteer</Heading>
+              <Text mt={2}>Support our healthcare initiatives by participating in health camps, assisting medical professionals, and educating the community about health and wellness.</Text>
+            </Box>
+          </VStack>
+        </Box>
+      </Box>
+
+      {/* Volunteer Application Form */}
+      <Box mb={10}>
+        <Heading as="h2" size="xl" mb={4} textAlign="center">Apply to Volunteer</Heading>
         <Box maxW="600px" mx="auto">
-          <Heading as="h3" size="lg" mb={4}>Apply to Volunteer</Heading>
           <FormControl mb={4}>
             <FormLabel>Name</FormLabel>
             <Input placeholder="Your Name" />
@@ -32,8 +53,30 @@ const GetInvolved: React.FC = () => {
             <FormLabel>Message</FormLabel>
             <Textarea placeholder="Why do you want to volunteer?" />
           </FormControl>
-          <Button colorScheme="teal">Submit Application</Button>
+          <Button colorScheme="teal" width="full">Submit Application</Button>
         </Box>
+      </Box>
+
+      {/* Testimonials */}
+      <Box mb={10}>
+        <Heading as="h2" size="xl" mb={4} textAlign="center">Volunteer Testimonials</Heading>
+        <Flex justify="center" wrap="wrap">
+          <Box maxW="300px" m={4} textAlign="center">
+            <Image src="/images/volunteer1.jpg" alt="Volunteer 1" borderRadius="full" boxSize="150px" mx="auto" />
+            <Text mt={2} fontWeight="bold">John Doe</Text>
+            <Text>"Volunteering with HUFIDA has been an incredibly rewarding experience. I've had the opportunity to make a real difference in my community."</Text>
+          </Box>
+          <Box maxW="300px" m={4} textAlign="center">
+            <Image src="/images/volunteer2.jpg" alt="Volunteer 2" borderRadius="full" boxSize="150px" mx="auto" />
+            <Text mt={2} fontWeight="bold">Jane Smith</Text>
+            <Text>"The team at HUFIDA is amazing. They are dedicated, passionate, and truly care about the work they do. I'm proud to be a part of this organization."</Text>
+          </Box>
+          <Box maxW="300px" m={4} textAlign="center">
+            <Image src="/images/volunteer3.jpg" alt="Volunteer 3" borderRadius="full" boxSize="150px" mx="auto" />
+            <Text mt={2} fontWeight="bold">Michael Johnson</Text>
+            <Text>"I've learned so much and met so many wonderful people through my volunteer work with HUFIDA. It's been a life-changing experience."</Text>
+          </Box>
+        </Flex>
       </Box>
 
       {/* Donate */}
