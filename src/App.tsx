@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import BlogDetail from "./pages/BlogDetail";
 
 import Topbar from "./components/Topbar";
 
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             <Route path="/get-involved" element={<GetInvolved />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
           </Routes>
         </Box>
       </Flex>
