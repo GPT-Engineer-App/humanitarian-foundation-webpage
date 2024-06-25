@@ -90,3 +90,44 @@ export const useDeleteUser = () => {
         },
     });
 };
+
+// Hooks for volunteer opportunities
+export const useVolunteerOpportunities = () => useQuery({
+    queryKey: ['volunteerOpportunities'],
+    queryFn: () => fromSupabase(supabase.from('volunteer_opportunities').select('*')),
+});
+
+export const useVolunteerOpportunity = (id) => useQuery({
+    queryKey: ['volunteerOpportunity', id],
+    queryFn: () => fromSupabase(supabase.from('volunteer_opportunities').select('*').eq('id', id).single()),
+});
+
+export const useAddVolunteerOpportunity = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (newVolunteerOpportunity) => fromSupabase(supabase.from('volunteer_opportunities').insert([newVolunteerOpportunity])),
+        onSuccess: () => {
+            queryClient.invalidateQueries('volunteerOpportunities');
+        },
+    });
+};
+
+export const useUpdateVolunteerOpportunity = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (updatedVolunteerOpportunity) => fromSupabase(supabase.from('volunteer_opportunities').update(updatedVolunteerOpportunity).eq('id', updatedVolunteerOpportunity.id)),
+        onSuccess: () => {
+            queryClient.invalidateQueries('volunteerOpportunities');
+        },
+    });
+};
+
+export const useDeleteVolunteerOpportunity = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (id) => fromSupabase(supabase.from('volunteer_opportunities').delete().eq('id', id)),
+        onSuccess: () => {
+            queryClient.invalidateQueries('volunteerOpportunities');
+        },
+    });
+};
