@@ -22,7 +22,7 @@ import {
   ModalBody,
   IconButton,
 } from "@chakra-ui/react";
-import { CloseIcon } from "@chakra-ui/icons";
+import { FaTimes as CloseIcon } from "react-icons/fa";
 
 const News: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
