@@ -131,3 +131,44 @@ export const useDeleteVolunteerOpportunity = () => {
         },
     });
 };
+
+// Hooks for testimonials
+export const useTestimonials = () => useQuery({
+    queryKey: ['testimonials'],
+    queryFn: () => fromSupabase(supabase.from('testimonials').select('*')),
+});
+
+export const useTestimonial = (id) => useQuery({
+    queryKey: ['testimonial', id],
+    queryFn: () => fromSupabase(supabase.from('testimonials').select('*').eq('id', id).single()),
+});
+
+export const useAddTestimonial = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (newTestimonial) => fromSupabase(supabase.from('testimonials').insert([newTestimonial])),
+        onSuccess: () => {
+            queryClient.invalidateQueries('testimonials');
+        },
+    });
+};
+
+export const useUpdateTestimonial = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (updatedTestimonial) => fromSupabase(supabase.from('testimonials').update(updatedTestimonial).eq('id', updatedTestimonial.id)),
+        onSuccess: () => {
+            queryClient.invalidateQueries('testimonials');
+        },
+    });
+};
+
+export const useDeleteTestimonial = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (id) => fromSupabase(supabase.from('testimonials').delete().eq('id', id)),
+        onSuccess: () => {
+            queryClient.invalidateQueries('testimonials');
+        },
+    });
+};
