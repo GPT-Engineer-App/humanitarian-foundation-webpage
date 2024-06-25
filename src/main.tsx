@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { ChakraProvider, extendTheme, Box } from "@chakra-ui/react";
+import { SupabaseProvider } from "/src/integrations/supabase/index.js";
 
 const colors = {
   brand: {
@@ -18,10 +19,12 @@ if (!root) throw new Error("Failed to find the root element");
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <Box pt="60px">
-      <App />
-      </Box>
-    </ChakraProvider>
+    <SupabaseProvider>
+      <ChakraProvider theme={theme}>
+        <Box pt="60px">
+          <App />
+        </Box>
+      </ChakraProvider>
+    </SupabaseProvider>
   </React.StrictMode>
 );
