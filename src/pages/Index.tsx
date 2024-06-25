@@ -1,18 +1,12 @@
 import React from "react";
-import { Box, Button, Flex, Heading, Text, VStack, HStack, Link, Icon, Divider, Image } from "@chakra-ui/react";
-import { Helmet } from "react-helmet";
+import { Box, Button, Flex, Heading, Image, Text, VStack, HStack, Link, Icon, Divider } from "@chakra-ui/react";
 import { FaDonate, FaHandsHelping, FaNewspaper, FaQuoteLeft, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Index: React.FC = () => {
   return (
     <Box>
-      <Helmet>
-        <title>HUFIDA - Empowering Communities, Transforming Lives</title>
-        <meta name="description" content="The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives." />
-        <meta name="keywords" content="HUFIDA, humanitarian, development, Africa, sustainable projects, education, healthcare" />
-      </Helmet>
       {/* Hero Section */}
-      <Box bgImage="url('/images/hero.jpg')" bgSize="cover" bgPos="center" color="white" textAlign="center" py={{ base: 10, md: 20 }}>
+      <Box bgImage="url('/images/hero.jpg')" bgSize="cover" bgPos="center" color="white" textAlign="center" py={20}>
         <Heading as="h1" size="2xl" mb={4}>Empowering Communities, Transforming Lives</Heading>
         <Text fontSize="xl" mb={8}>Join us in making a difference in Africa. The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives.</Text>
         <Button colorScheme="teal" size="lg" mr={4}>Get Involved</Button>
@@ -20,13 +14,13 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Mission Statement */}
-      <Box py={{ base: 5, md: 10 }} textAlign="center">
+      <Box py={10} textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Our Mission</Heading>
         <Text fontSize="lg" maxW="600px" mx="auto">The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives.</Text>
       </Box>
 
       {/* Impact Statistics */}
-      <Box py={{ base: 5, md: 10 }} bg="gray.100" textAlign="center">
+      <Box py={10} bg="gray.100" textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Our Impact</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="200px" m={4}>
@@ -45,7 +39,7 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Quick Links */}
-      <Flex justify="center" py={{ base: 5, md: 10 }} bg="gray.100" wrap={{ base: 'wrap', md: 'nowrap' }}>
+      <Flex justify="center" py={10} bg="gray.100">
         <HStack spacing={10}>
           <VStack>
             <Icon as={FaDonate} boxSize={10} color="teal.500" />
@@ -63,21 +57,21 @@ const Index: React.FC = () => {
       </Flex>
 
       {/* Featured Projects */}
-      <Box py={{ base: 5, md: 10 }} textAlign="center">
+      <Box py={10} textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Featured Projects</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
-            <Image src="/images/project1.jpg" alt="Clean Water Initiative" borderRadius="md" width={300} height={200} />
+            <Image src="/images/project1.jpg" alt="Project 1" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Clean Water Initiative</Heading>
             <Text mt={2}>Providing access to clean and safe drinking water in rural communities.</Text>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/project2.jpg" alt="Educational Programs" borderRadius="md" width={300} height={200} />
+            <Image src="/images/project2.jpg" alt="Project 2" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Educational Programs</Heading>
             <Text mt={2}>Empowering the next generation through quality education and resources.</Text>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/project3.jpg" alt="Healthcare Services" borderRadius="md" width={300} height={200} />
+            <Image src="/images/project3.jpg" alt="Project 3" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Healthcare Services</Heading>
             <Text mt={2}>Improving healthcare access and outcomes in underserved areas.</Text>
           </Box>
@@ -85,7 +79,7 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Testimonials */}
-      <Box py={{ base: 5, md: 10 }} bg="gray.100" textAlign="center">
+      <Box py={10} bg="gray.100" textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Testimonials</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="left">
@@ -107,7 +101,7 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Footer */}
-      <Box py={{ base: 5, md: 10 }} bg="gray.800" color="white" textAlign="center">
+      <Box py={10} bg="gray.800" color="white" textAlign="center">
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
             <Heading as="h3" size="md" mb={4}>Contact Us</Heading>
@@ -119,9 +113,9 @@ const Index: React.FC = () => {
           <Box maxW="300px" m={4}>
             <Heading as="h3" size="md" mb={4}>Follow Us</Heading>
             <HStack justify="center" spacing={4}>
-              <Link href="#" aria-label="Facebook"><Icon as={FaFacebook} boxSize={6} /></Link>
-              <Link href="#" aria-label="Twitter"><Icon as={FaTwitter} boxSize={6} /></Link>
-              <Link href="#" aria-label="Instagram"><Icon as={FaInstagram} boxSize={6} /></Link>
+              <Link href="#"><Icon as={FaFacebook} boxSize={6} /></Link>
+              <Link href="#"><Icon as={FaTwitter} boxSize={6} /></Link>
+              <Link href="#"><Icon as={FaInstagram} boxSize={6} /></Link>
             </HStack>
           </Box>
           <Box maxW="300px" m={4}>

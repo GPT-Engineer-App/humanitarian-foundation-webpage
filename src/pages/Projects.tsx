@@ -1,23 +1,16 @@
 import React from "react";
-import { Box, Heading, Text, Flex, Progress, Link, Icon } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
+import { Box, Heading, Text, Image, Flex, Progress, Link, Icon } from "@chakra-ui/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Projects: React.FC = () => {
   return (
     <Box p={4}>
-      <Helmet>
-        <title>HUFIDA Projects - Making a Difference in Africa</title>
-        <meta name="description" content="Explore HUFIDA's current and past projects in sustainable development, education, and healthcare across Africa." />
-        <meta name="keywords" content="HUFIDA, projects, sustainable development, education, healthcare, Africa" />
-      </Helmet>
       {/* Current Projects */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Current Projects</Heading>
-        <Flex justify="center" wrap="wrap" direction={{ base: "column", md: "row" }}>
+        <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
-            <Image src="/images/current_project1.jpg" alt="Clean Water Initiative - Providing access to clean and safe drinking water in rural communities." borderRadius="8px" />
+            <Image src="/images/current_project1.jpg" alt="Clean Water Initiative" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Clean Water Initiative</Heading>
             <Text mt={2}>Providing access to clean and safe drinking water in rural communities.</Text>
             <Text mt={2}><strong>Goal:</strong> To ensure every household has access to clean water by the end of 2023.</Text>
@@ -25,7 +18,7 @@ const Projects: React.FC = () => {
             <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/current_project2.jpg" alt="Educational Programs - Empowering the next generation through quality education and resources." borderRadius="8px" />
+            <Image src="/images/current_project2.jpg" alt="Educational Programs" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Educational Programs</Heading>
             <Text mt={2}>Empowering the next generation through quality education and resources.</Text>
             <Text mt={2}><strong>Goal:</strong> To provide educational resources to 1,000 children by mid-2024.</Text>
@@ -33,7 +26,7 @@ const Projects: React.FC = () => {
             <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/current_project3.jpg" alt="Healthcare Services - Improving healthcare access and outcomes in underserved areas." borderRadius="8px" />
+            <Image src="/images/current_project3.jpg" alt="Healthcare Services" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Healthcare Services</Heading>
             <Text mt={2}>Improving healthcare access and outcomes in underserved areas.</Text>
             <Text mt={2}><strong>Goal:</strong> To establish 5 new healthcare centers by the end of 2024.</Text>
@@ -46,23 +39,23 @@ const Projects: React.FC = () => {
       {/* Past Projects */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Past Projects</Heading>
-        <Flex justify="center" wrap="wrap" direction={{ base: "column", md: "row" }}>
+        <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
-            <Image src="/images/past_project1.jpg" alt="Agricultural Development - Enhanced agricultural practices leading to increased crop yields and food security." borderRadius="8px" />
+            <Image src="/images/past_project1.jpg" alt="Agricultural Development" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Agricultural Development</Heading>
             <Text mt={2}>Enhanced agricultural practices leading to increased crop yields and food security.</Text>
             <Text mt={2}><strong>Outcome:</strong> Increased crop yields by 30% and improved food security for 500 families.</Text>
             <Text mt={2}><strong>Impact Report:</strong> [Link to detailed report]</Text>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/past_project2.jpg" alt="Women's Empowerment - Programs aimed at empowering women through education and vocational training." borderRadius="8px" />
+            <Image src="/images/past_project2.jpg" alt="Women's Empowerment" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Women's Empowerment</Heading>
             <Text mt={2}>Programs aimed at empowering women through education and vocational training.</Text>
             <Text mt={2}><strong>Outcome:</strong> Empowered 200 women with new skills and opportunities.</Text>
             <Text mt={2}><strong>Impact Report:</strong> [Link to detailed report]</Text>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/past_project3.jpg" alt="Renewable Energy - Introduction of renewable energy solutions to reduce reliance on fossil fuels." borderRadius="8px" />
+            <Image src="/images/past_project3.jpg" alt="Renewable Energy" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Renewable Energy</Heading>
             <Text mt={2}>Introduction of renewable energy solutions to reduce reliance on fossil fuels.</Text>
             <Text mt={2}><strong>Outcome:</strong> Installed solar panels in 100 homes, reducing energy costs by 40%.</Text>
@@ -74,7 +67,7 @@ const Projects: React.FC = () => {
       {/* Interactive Map */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Where We Operate</Heading>
-        <Box textAlign="center" p={4}>
+        <Box textAlign="center">
           <Icon as={FaMapMarkerAlt} boxSize={10} color="teal.500" />
           <Text mt={2}>Interactive map coming soon...</Text>
           <Text mt={2}>We operate in various regions across Africa, focusing on areas with the greatest need for development and support.</Text>

@@ -13,10 +13,9 @@ import Sidebar from "./components/Sidebar";
 const App: React.FC = () => {
   return (
     <Router>
-      {/* SSL certificate implementation placeholder */}
-      <Flex direction={{ base: "column", md: "row" }}>
+      <Flex>
         <Sidebar />
-        <Box flex="1" p={{ base: 2, md: 4 }}>
+        <Box flex="1" p={4}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about-us" element={<AboutUs />} />
