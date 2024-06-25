@@ -9,6 +9,7 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 
 import Topbar from "./components/Topbar";
+import ProjectDetail from "./pages/ProjectDetail";
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
