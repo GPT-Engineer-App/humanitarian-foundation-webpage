@@ -8,14 +8,34 @@ const Index: React.FC = () => {
       {/* Hero Section */}
       <Box bgImage="url('/images/hero.jpg')" bgSize="cover" bgPos="center" color="white" textAlign="center" py={20}>
         <Heading as="h1" size="2xl" mb={4}>Empowering Communities, Transforming Lives</Heading>
-        <Text fontSize="xl" mb={8}>Join us in making a difference in Africa</Text>
-        <Button colorScheme="teal" size="lg">Get Involved</Button>
+        <Text fontSize="xl" mb={8}>Join us in making a difference in Africa. The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives.</Text>
+        <Button colorScheme="teal" size="lg" mr={4}>Get Involved</Button>
+        <Button colorScheme="teal" size="lg" variant="outline">Learn More</Button>
       </Box>
 
       {/* Mission Statement */}
       <Box py={10} textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Our Mission</Heading>
         <Text fontSize="lg" maxW="600px" mx="auto">The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives.</Text>
+      </Box>
+
+      {/* Impact Statistics */}
+      <Box py={10} bg="gray.100" textAlign="center">
+        <Heading as="h2" size="xl" mb={4}>Our Impact</Heading>
+        <Flex justify="center" wrap="wrap">
+          <Box maxW="200px" m={4}>
+            <Heading as="h3" size="2xl" color="teal.500">50+</Heading>
+            <Text mt={2}>Communities Served</Text>
+          </Box>
+          <Box maxW="200px" m={4}>
+            <Heading as="h3" size="2xl" color="teal.500">100+</Heading>
+            <Text mt={2}>Projects Completed</Text>
+          </Box>
+          <Box maxW="200px" m={4}>
+            <Heading as="h3" size="2xl" color="teal.500">200+</Heading>
+            <Text mt={2}>Volunteers Engaged</Text>
+          </Box>
+        </Flex>
       </Box>
 
       {/* Quick Links */}
