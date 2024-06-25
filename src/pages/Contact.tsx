@@ -1,14 +1,21 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Box, Heading, Text, VStack, FormControl, FormLabel, Input, Textarea, Button, HStack, Icon, Link } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
     <Box p={4}>
+      <Helmet>
+        <title>Contact HUFIDA - Get in Touch with Us</title>
+        <meta name="description" content="Contact HUFIDA for inquiries about our sustainable development projects, volunteering opportunities, or donations." />
+        <meta name="keywords" content="HUFIDA, contact, sustainable development, volunteering, donations" />
+      </Helmet>
+
       {/* Contact Form */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Contact Us</Heading>
-        <Box maxW="600px" mx="auto">
+        <Box maxW="600px" mx="auto" w={{ base: "90%", md: "100%" }}>
           <FormControl mb={4}>
             <FormLabel>Name</FormLabel>
             <Input placeholder="Your Name" />
@@ -40,10 +47,10 @@ const Contact: React.FC = () => {
       <Box textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Follow Us</Heading>
         <HStack justify="center" spacing={4}>
-          <Link href="#" isExternal><Icon as={FaFacebook} boxSize={6} /></Link>
-          <Link href="#" isExternal><Icon as={FaTwitter} boxSize={6} /></Link>
-          <Link href="#" isExternal><Icon as={FaInstagram} boxSize={6} /></Link>
-          <Link href="#" isExternal><Icon as={FaLinkedin} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="Facebook"><Icon as={FaFacebook} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="Twitter"><Icon as={FaTwitter} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="Instagram"><Icon as={FaInstagram} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="LinkedIn"><Icon as={FaLinkedin} boxSize={6} /></Link>
         </HStack>
       </Box>
     </Box>
