@@ -10,23 +10,26 @@ const Projects: React.FC = () => {
         <Heading as="h2" size="xl" mb={4} textAlign="center">Current Projects</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
-            <Image src="/images/current_project1.jpg" alt="Current Project 1" borderRadius="md" />
+            <Image src="/images/current_project1.jpg" alt="Clean Water Initiative" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Clean Water Initiative</Heading>
             <Text mt={2}>Providing access to clean and safe drinking water in rural communities.</Text>
+            <Text mt={2}><strong>Goal:</strong> To ensure every household has access to clean water by the end of 2023.</Text>
             <Progress value={70} size="sm" colorScheme="teal" mt={2} />
             <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/current_project2.jpg" alt="Current Project 2" borderRadius="md" />
+            <Image src="/images/current_project2.jpg" alt="Educational Programs" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Educational Programs</Heading>
             <Text mt={2}>Empowering the next generation through quality education and resources.</Text>
+            <Text mt={2}><strong>Goal:</strong> To provide educational resources to 1,000 children by mid-2024.</Text>
             <Progress value={50} size="sm" colorScheme="teal" mt={2} />
             <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/current_project3.jpg" alt="Current Project 3" borderRadius="md" />
+            <Image src="/images/current_project3.jpg" alt="Healthcare Services" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Healthcare Services</Heading>
             <Text mt={2}>Improving healthcare access and outcomes in underserved areas.</Text>
+            <Text mt={2}><strong>Goal:</strong> To establish 5 new healthcare centers by the end of 2024.</Text>
             <Progress value={85} size="sm" colorScheme="teal" mt={2} />
             <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
@@ -38,19 +41,25 @@ const Projects: React.FC = () => {
         <Heading as="h2" size="xl" mb={4} textAlign="center">Past Projects</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
-            <Image src="/images/past_project1.jpg" alt="Past Project 1" borderRadius="md" />
+            <Image src="/images/past_project1.jpg" alt="Agricultural Development" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Agricultural Development</Heading>
             <Text mt={2}>Enhanced agricultural practices leading to increased crop yields and food security.</Text>
+            <Text mt={2}><strong>Outcome:</strong> Increased crop yields by 30% and improved food security for 500 families.</Text>
+            <Text mt={2}><strong>Impact Report:</strong> [Link to detailed report]</Text>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/past_project2.jpg" alt="Past Project 2" borderRadius="md" />
+            <Image src="/images/past_project2.jpg" alt="Women's Empowerment" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Women's Empowerment</Heading>
             <Text mt={2}>Programs aimed at empowering women through education and vocational training.</Text>
+            <Text mt={2}><strong>Outcome:</strong> Empowered 200 women with new skills and opportunities.</Text>
+            <Text mt={2}><strong>Impact Report:</strong> [Link to detailed report]</Text>
           </Box>
           <Box maxW="300px" m={4}>
-            <Image src="/images/past_project3.jpg" alt="Past Project 3" borderRadius="md" />
+            <Image src="/images/past_project3.jpg" alt="Renewable Energy" borderRadius="md" />
             <Heading as="h3" size="md" mt={4}>Renewable Energy</Heading>
             <Text mt={2}>Introduction of renewable energy solutions to reduce reliance on fossil fuels.</Text>
+            <Text mt={2}><strong>Outcome:</strong> Installed solar panels in 100 homes, reducing energy costs by 40%.</Text>
+            <Text mt={2}><strong>Impact Report:</strong> [Link to detailed report]</Text>
           </Box>
         </Flex>
       </Box>
@@ -61,6 +70,7 @@ const Projects: React.FC = () => {
         <Box textAlign="center">
           <Icon as={FaMapMarkerAlt} boxSize={10} color="teal.500" />
           <Text mt={2}>Interactive map coming soon...</Text>
+          <Text mt={2}>We operate in various regions across Africa, focusing on areas with the greatest need for development and support.</Text>
         </Box>
       </Box>
     </Box>
