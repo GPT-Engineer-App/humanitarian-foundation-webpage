@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, useToast } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, useToast, Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
 import { useUsers, useAddVolunteerOpportunity, useUpdateVolunteerOpportunity, useDeleteVolunteerOpportunity, useVolunteerOpportunities, useAddTestimonial, useUpdateTestimonial, useDeleteTestimonial, useTestimonials } from "../integrations/supabase/index.js";
 
 const GetInvolved: React.FC = () => {
@@ -126,7 +126,49 @@ const GetInvolved: React.FC = () => {
         </Box>
       </Box>
 
-      {/* Testimonials */}
+      {/* Preview Table */}
+      <Box mb={10}>
+        <Heading as="h2" size="xl" mb={4} textAlign="center">Preview of Volunteer Opportunities and Testimonials</Heading>
+        <Box maxW="800px" mx="auto">
+          <Heading as="h3" size="lg" mb={4}>Volunteer Opportunities</Heading>
+          <Table variant="simple" mb={6}>
+            <Thead>
+              <Tr>
+                <Th>Name</Th>
+                <Th>Description</Th>
+                <Th>User</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {volunteerOpportunities.map((volunteer: any) => (
+                <Tr key={volunteer.id}>
+                  <Td>{volunteer.name}</Td>
+                  <Td>{volunteer.description}</Td>
+                  <Td>{users.find((user: any) => user.id === volunteer.user_id)?.name}</Td>
+                </Tr>
+              ))}
+            </Tbody>
+          </Table>
+
+          <Heading as="h3" size="lg" mb={4}>Testimonials</Heading>
+          <Table variant="simple" mb={6}>
+            <Thead>
+              <Tr>
+                <Th>Content</Th>
+                <Th>User</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {testimonials.map((testimonial: any) => (
+                <Tr key={testimonial.id}>
+                  <Td>{testimonial.content}</Td>
+                  <Td>{users.find((user: any) => user.id === testimonial.user_id)?.name}</Td>
+                </Tr>
+              ))}
+            </Tbody>
+          </Table>
+        </Box>
+      </Box>
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Volunteer Testimonials</Heading>
         <Flex justify="center" wrap="wrap">
