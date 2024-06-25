@@ -1,15 +1,60 @@
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+}
+
+interface Task {
+  id: number;
+  name: string;
+  description: string;
+  assignedTo: string;
+  status: string;
+  priority: string;
+}
+
+interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  contact: string;
+}
+
+interface Milestone {
+  id: number;
+  name: string;
+  description: string;
+  dueDate: string;
+  status: string;
+}
+
+interface Resource {
+  id: number;
+  type: string;
+  quantity: number;
+  allocationDate: string;
+}
+
+interface Communication {
+  id: number;
+  sender: string;
+  receiver: string;
+  message: string;
+  date: string;
+}
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Heading, Text, Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
 
 const ProjectDetail: React.FC = () => {
   const { projectId } = useParams();
-  const [project, setProject] = useState(null);
-  const [tasks, setTasks] = useState([]);
-  const [teamMembers, setTeamMembers] = useState([]);
-  const [milestones, setMilestones] = useState([]);
-  const [resources, setResources] = useState([]);
-  const [communications, setCommunications] = useState([]);
+  const [project, setProject] = useState<Project | null>(null);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [resources, setResources] = useState<Resource[]>([]);
+  const [communications, setCommunications] = useState<Communication[]>([]);
 
   useEffect(() => {
     // Fetch project data
