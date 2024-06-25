@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Box, Heading, Text, VStack, Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
+import { Box, Heading, Text, Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
 
 const BlogDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
