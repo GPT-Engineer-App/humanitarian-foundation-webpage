@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme, Box } from "@chakra-ui/react";
 
 const colors = {
   brand: {
@@ -19,7 +19,9 @@ if (!root) throw new Error("Failed to find the root element");
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
+      <Box pt="60px">
       <App />
+      </Box>
     </ChakraProvider>
   </React.StrictMode>
 );
