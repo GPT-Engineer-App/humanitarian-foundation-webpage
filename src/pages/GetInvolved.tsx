@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Image, Checkbox } from "@chakra-ui/react";
 
 const GetInvolved: React.FC = () => {
   return (
@@ -42,23 +42,46 @@ const GetInvolved: React.FC = () => {
         <Text fontSize="lg" textAlign="center" maxW="800px" mx="auto" mb={4}>
           Your donations help us continue our mission. Choose a donation method that works best for you.
         </Text>
+        <Box maxW="600px" mx="auto">
+          <FormControl mb={4}>
+            <FormLabel>Donation Amount</FormLabel>
+            <Input type="number" placeholder="Enter amount" />
+          </FormControl>
+          <FormControl mb={4}>
+            <FormLabel>Name</FormLabel>
+            <Input placeholder="Your Name" />
+          </FormControl>
+          <FormControl mb={4}>
+            <FormLabel>Email</FormLabel>
+            <Input type="email" placeholder="Your Email" />
+          </FormControl>
+          <FormControl mb={4}>
+            <FormLabel>Payment Details</FormLabel>
+            <Input placeholder="Card Number" />
+          </FormControl>
+          <Checkbox mb={4}>Make this a recurring donation</Checkbox>
+          <Button colorScheme="teal" width="full">Donate Now</Button>
+        </Box>
+      </Box>
+
+      {/* Impact Stories */}
+      <Box mb={10}>
+        <Heading as="h2" size="xl" mb={4} textAlign="center">Impact Stories</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="center">
-            <Heading as="h3" size="md" mb={2}>One-Time Donation</Heading>
-            <Button colorScheme="teal">Donate Now</Button>
+            <Image src="/images/impact1.jpg" alt="Impact Story 1" borderRadius="md" />
+            <Text mt={2}>Story 1: How your donations have made a difference.</Text>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Heading as="h3" size="md" mb={2}>Monthly Donation</Heading>
-            <Button colorScheme="teal">Donate Monthly</Button>
+            <Image src="/images/impact2.jpg" alt="Impact Story 2" borderRadius="md" />
+            <Text mt={2}>Story 2: Transforming lives through education.</Text>
           </Box>
           <Box maxW="300px" m={4} textAlign="center">
-            <Heading as="h3" size="md" mb={2}>Sponsorship</Heading>
-            <Button colorScheme="teal">Become a Sponsor</Button>
+            <Image src="/images/impact3.jpg" alt="Impact Story 3" borderRadius="md" />
+            <Text mt={2}>Story 3: Providing healthcare to those in need.</Text>
           </Box>
         </Flex>
       </Box>
-
-      {/* Fundraise */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Fundraise</Heading>
         <Text fontSize="lg" textAlign="center" maxW="800px" mx="auto" mb={4}>
