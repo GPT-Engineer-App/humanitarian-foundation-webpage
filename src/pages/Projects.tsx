@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, Image, Flex, Progress, Icon } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box, Heading, Text, Image, Flex, Progress, Link, Icon } from "@chakra-ui/react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Projects: React.FC = () => {
@@ -16,9 +15,7 @@ const Projects: React.FC = () => {
             <Text mt={2}>Providing access to clean and safe drinking water in rural communities.</Text>
             <Text mt={2}><strong>Goal:</strong> To ensure every household has access to clean water by the end of 2023.</Text>
             <Progress value={70} size="sm" colorScheme="teal" mt={2} />
-            <Box mt={2} display="block">
-              <Link to={`/projects/1`} color="teal.500">Read More</Link>
-            </Box>
+            <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
           <Box maxW="300px" m={4}>
             <Image src="/images/current_project2.jpg" alt="Educational Programs" borderRadius="md" />
@@ -26,9 +23,7 @@ const Projects: React.FC = () => {
             <Text mt={2}>Empowering the next generation through quality education and resources.</Text>
             <Text mt={2}><strong>Goal:</strong> To provide educational resources to 1,000 children by mid-2024.</Text>
             <Progress value={50} size="sm" colorScheme="teal" mt={2} />
-            <Box mt={2} display="block">
-              <Link to={`/projects/2`} color="teal.500">Read More</Link>
-            </Box>
+            <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
           <Box maxW="300px" m={4}>
             <Image src="/images/current_project3.jpg" alt="Healthcare Services" borderRadius="md" />
@@ -36,9 +31,7 @@ const Projects: React.FC = () => {
             <Text mt={2}>Improving healthcare access and outcomes in underserved areas.</Text>
             <Text mt={2}><strong>Goal:</strong> To establish 5 new healthcare centers by the end of 2024.</Text>
             <Progress value={85} size="sm" colorScheme="teal" mt={2} />
-            <Box mt={2} display="block">
-              <Link to={`/projects/3`} color="teal.500">Read More</Link>
-            </Box>
+            <Link href="#" color="teal.500" mt={2} display="block">Get Involved</Link>
           </Box>
         </Flex>
       </Box>
