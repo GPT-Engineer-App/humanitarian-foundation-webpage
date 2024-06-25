@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Text, VStack, Button, Input, Textarea, FormControl, FormLabel, Select, Flex, Checkbox, Image } from "@chakra-ui/react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 const GetInvolved: React.FC = () => {
   return (

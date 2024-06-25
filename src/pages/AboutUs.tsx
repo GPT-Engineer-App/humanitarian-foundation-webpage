@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Text, VStack, Flex, Image } from "@chakra-ui/react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const AboutUs: React.FC = () => {
   return (

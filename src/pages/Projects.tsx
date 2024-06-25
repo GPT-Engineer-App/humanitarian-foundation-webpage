@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Heading, Text, Flex, Progress, Link, Icon } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Projects: React.FC = () => {

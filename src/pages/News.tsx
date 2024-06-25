@@ -78,7 +78,6 @@ const News: React.FC = () => {
                     alt="Featured Blog"
                     width={800}
                     height={400}
-                    layout="responsive"
                   />
                   <Heading as="h3" size="lg">
                     Featured Blog Post
@@ -146,8 +145,6 @@ const News: React.FC = () => {
                     alt="Media 1"
                     width={200}
                     height={200}
-                    layout="responsive"
-                    objectFit="cover"
                     style={{ cursor: "pointer" }}
                   />
                 </Box>
@@ -157,8 +154,6 @@ const News: React.FC = () => {
                     alt="Media 2"
                     width={200}
                     height={200}
-                    layout="responsive"
-                    objectFit="cover"
                     style={{ cursor: "pointer" }}
                   />
                 </Box>
@@ -168,8 +163,6 @@ const News: React.FC = () => {
                     alt="Media 3"
                     width={200}
                     height={200}
-                    layout="responsive"
-                    objectFit="cover"
                     style={{ cursor: "pointer" }}
                   />
                 </Box>
@@ -198,7 +191,6 @@ const News: React.FC = () => {
                   alt="Selected Media"
                   width={800}
                   height={600}
-                  layout="responsive"
                 />
               )}
             </ModalBody>
