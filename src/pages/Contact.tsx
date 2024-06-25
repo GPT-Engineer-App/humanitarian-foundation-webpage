@@ -5,10 +5,12 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Contact: React.FC = () => {
   return (
     <Box p={4}>
+      
+
       {/* Contact Form */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Contact Us</Heading>
-        <Box maxW="600px" mx="auto">
+        <Box maxW="600px" mx="auto" w={{ base: "90%", md: "100%" }}>
           <FormControl mb={4}>
             <FormLabel>Name</FormLabel>
             <Input placeholder="Your Name" />
@@ -40,10 +42,10 @@ const Contact: React.FC = () => {
       <Box textAlign="center">
         <Heading as="h2" size="xl" mb={4}>Follow Us</Heading>
         <HStack justify="center" spacing={4}>
-          <Link href="#" isExternal><Icon as={FaFacebook} boxSize={6} /></Link>
-          <Link href="#" isExternal><Icon as={FaTwitter} boxSize={6} /></Link>
-          <Link href="#" isExternal><Icon as={FaInstagram} boxSize={6} /></Link>
-          <Link href="#" isExternal><Icon as={FaLinkedin} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="Facebook"><Icon as={FaFacebook} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="Twitter"><Icon as={FaTwitter} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="Instagram"><Icon as={FaInstagram} boxSize={6} /></Link>
+          <Link href="#" isExternal aria-label="LinkedIn"><Icon as={FaLinkedin} boxSize={6} /></Link>
         </HStack>
       </Box>
     </Box>
