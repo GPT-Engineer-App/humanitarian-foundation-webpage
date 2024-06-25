@@ -8,13 +8,13 @@ import Projects from "./pages/Projects";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 
-import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Flex>
-        <Sidebar />
+      <Flex direction="column">
+        <Topbar />
         <Box flex="1" p={4}>
           <Routes>
             <Route path="/" element={<Index />} />
