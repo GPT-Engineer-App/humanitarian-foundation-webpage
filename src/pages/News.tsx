@@ -129,8 +129,8 @@ const News: React.FC = () => {
               {filteredBlogPosts.map((post, index) => (
                 <Box key={index} p={4} shadow="md" borderWidth="1px">
                   {post.image && <Image src={post.image} alt={post.title} mb={4} />}
-                  <Heading as="h3" size="lg">{post.title}</Heading>
-                  <Text mt={2}>{post.summary}</Text>
+                  <Heading as="h3" size="lg" mb={2}>{post.title}</Heading>
+                  <Text mb={4}>{post.summary}</Text>
                   <Link color="teal.500" href={post.link}>Read More</Link>
                 </Box>
               ))}
@@ -141,9 +141,9 @@ const News: React.FC = () => {
             <VStack spacing={4} align="stretch">
               {filteredPressReleases.map((release, index) => (
                 <Box key={index} p={4} shadow="md" borderWidth="1px">
-                  <Heading as="h3" size="lg">{release.title}</Heading>
+                  <Heading as="h3" size="lg" mb={2}>{release.title}</Heading>
                   <Text mt={2}>Date: {release.date}</Text>
-                  <Text mt={2}>{release.summary}</Text>
+                  <Text mb={4}>{release.summary}</Text>
                   <Link color="teal.500" href={release.link}>View Full Release</Link>
                 </Box>
               ))}
