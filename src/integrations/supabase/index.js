@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 import { useQuery, useMutation, useQueryClient, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_PROJECT_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_API_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_PROJECT_URL || 'https://your-supabase-url.supabase.co';
+const supabaseKey = import.meta.env.VITE_SUPABASE_API_KEY || 'your-supabase-api-key';
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 import React from "react";
@@ -14,7 +14,7 @@ export function SupabaseProvider({ children }) {
 const fromSupabase = async (query) => {
     const { data, error } = await query;
     if (error) {
-        console.error(error);
+        console.error('Supabase Error:', error);
         throw new Error(error.message);
     }
     return data;
