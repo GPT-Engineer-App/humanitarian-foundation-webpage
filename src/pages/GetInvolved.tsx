@@ -91,9 +91,9 @@ const GetInvolved: React.FC = () => {
           <Heading as="h3" size="lg" mb={4}>Available Opportunities</Heading>
           <VStack spacing={4} align="stretch">
             {volunteerOpportunities.map((volunteer: any) => (
-              <Box key={volunteer.id} p={4} shadow="md" borderWidth="1px">
-                <Heading as="h4" size="md">{volunteer.name}</Heading>
-                <Text mt={2}>{volunteer.description}</Text>
+              <Box key={volunteer.id} p={4} shadow="md" borderWidth="1px" bg="gray.50" borderRadius="md">
+                <Heading as="h4" size="md" fontSize="lg">{volunteer.name}</Heading>
+                <Text mt={2} fontSize="md">{volunteer.description}</Text>
                 <Button mt={2} colorScheme="teal" onClick={() => handleVolunteerEdit(volunteer)}>Edit</Button>
                 <Button mt={2} colorScheme="red" onClick={() => handleVolunteerDelete(volunteer.id)}>Delete</Button>
               </Box>
@@ -103,33 +103,33 @@ const GetInvolved: React.FC = () => {
       </Box>
 
       {/* Volunteer Application Form */}
-      <Box mb={10}>
+      <Box mb={10} bg="gray.50" p={6} borderRadius="md">
         <Heading as="h2" size="xl" mb={4} textAlign="center">Apply to Volunteer</Heading>
         <Box maxW="600px" mx="auto" as="form" onSubmit={handleVolunteerFormSubmit}>
           <FormControl mb={4}>
-            <FormLabel>Name</FormLabel>
-            <Input name="name" value={volunteerForm.name} onChange={handleVolunteerFormChange} placeholder="Your Name" />
+            <FormLabel fontSize="lg">Name</FormLabel>
+            <Input name="name" value={volunteerForm.name} onChange={handleVolunteerFormChange} placeholder="Your Name" fontSize="md" />
           </FormControl>
           <FormControl mb={4}>
-            <FormLabel>Description</FormLabel>
-            <Textarea name="description" value={volunteerForm.description} onChange={handleVolunteerFormChange} placeholder="Why do you want to volunteer?" />
+            <FormLabel fontSize="lg">Description</FormLabel>
+            <Textarea name="description" value={volunteerForm.description} onChange={handleVolunteerFormChange} placeholder="Why do you want to volunteer?" fontSize="md" />
           </FormControl>
           <FormControl mb={4}>
-            <FormLabel>User</FormLabel>
-            <Select name="user_id" value={volunteerForm.user_id} onChange={handleVolunteerFormChange} placeholder="Select user">
+            <FormLabel fontSize="lg">User</FormLabel>
+            <Select name="user_id" value={volunteerForm.user_id} onChange={handleVolunteerFormChange} placeholder="Select user" fontSize="md">
               {users.map((user: any) => (
                 <option key={user.id} value={user.id}>{user.name}</option>
               ))}
             </Select>
           </FormControl>
-          <Button colorScheme="teal" width="full" type="submit">Submit Application</Button>
+          <Button colorScheme="teal" width="full" type="submit" fontSize="lg">Submit Application</Button>
         </Box>
       </Box>
 
       {/* Preview Table */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Preview of Volunteer Opportunities and Testimonials</Heading>
-        <Box maxW="800px" mx="auto">
+        <Box maxW="800px" mx="auto" bg="gray.50" p={6} borderRadius="md">
           <Heading as="h3" size="lg" mb={4}>Volunteer Opportunities</Heading>
           <Table variant="simple" mb={6}>
             <Thead>
@@ -169,13 +169,15 @@ const GetInvolved: React.FC = () => {
           </Table>
         </Box>
       </Box>
+
+      {/* Volunteer Testimonials */}
       <Box mb={10}>
         <Heading as="h2" size="xl" mb={4} textAlign="center">Volunteer Testimonials</Heading>
         <Flex justify="center" wrap="wrap">
           {testimonials.map((testimonial: any) => (
-            <Box key={testimonial.id} maxW="300px" m={4} textAlign="center">
-              <Text mt={2} fontWeight="bold">{users.find((user: any) => user.id === testimonial.user_id)?.name}</Text>
-              <Text>"{testimonial.content}"</Text>
+            <Box key={testimonial.id} maxW="300px" m={4} textAlign="center" bg="gray.50" p={4} borderRadius="md">
+              <Text mt={2} fontWeight="bold" fontSize="lg">{users.find((user: any) => user.id === testimonial.user_id)?.name}</Text>
+              <Text fontSize="md">"{testimonial.content}"</Text>
               <Button mt={2} colorScheme="teal" onClick={() => handleTestimonialEdit(testimonial)}>Edit</Button>
               <Button mt={2} colorScheme="red" onClick={() => handleTestimonialDelete(testimonial.id)}>Delete</Button>
             </Box>
@@ -184,22 +186,22 @@ const GetInvolved: React.FC = () => {
       </Box>
 
       {/* Testimonial Form */}
-      <Box mb={10}>
+      <Box mb={10} bg="gray.50" p={6} borderRadius="md">
         <Heading as="h2" size="xl" mb={4} textAlign="center">Add Testimonial</Heading>
         <Box maxW="600px" mx="auto" as="form" onSubmit={handleTestimonialFormSubmit}>
           <FormControl mb={4}>
-            <FormLabel>Content</FormLabel>
-            <Textarea name="content" value={testimonialForm.content} onChange={handleTestimonialFormChange} placeholder="Your Testimonial" />
+            <FormLabel fontSize="lg">Content</FormLabel>
+            <Textarea name="content" value={testimonialForm.content} onChange={handleTestimonialFormChange} placeholder="Your Testimonial" fontSize="md" />
           </FormControl>
           <FormControl mb={4}>
-            <FormLabel>User</FormLabel>
-            <Select name="user_id" value={testimonialForm.user_id} onChange={handleTestimonialFormChange} placeholder="Select user">
+            <FormLabel fontSize="lg">User</FormLabel>
+            <Select name="user_id" value={testimonialForm.user_id} onChange={handleTestimonialFormChange} placeholder="Select user" fontSize="md">
               {users.map((user: any) => (
                 <option key={user.id} value={user.id}>{user.name}</option>
               ))}
             </Select>
           </FormControl>
-          <Button colorScheme="teal" width="full" type="submit">Submit Testimonial</Button>
+          <Button colorScheme="teal" width="full" type="submit" fontSize="lg">Submit Testimonial</Button>
         </Box>
       </Box>
     </Box>
