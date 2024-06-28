@@ -6,9 +6,9 @@ const Index: React.FC = () => {
   return (
     <Box>
       {/* Hero Section */}
-      <Box bgImage="url('/images/hero.jpg')" bgSize="cover" bgPos="center" color="white" textAlign="center" py={20} position="relative">
+      <Box bgImage="url('/images/hero.jpg')" bgSize="cover" bgPos="center" color="white" textAlign="center" py={[10, 20]} position="relative">
         <Box position="absolute" top="0" left="0" right="0" bottom="0" bg="rgba(0, 0, 0, 0.5)" />
-        <Box position="relative" zIndex="1">
+        <Box position="relative" zIndex="1" px={[4, 8]}>
           <Heading as="h1" size="2xl" mb={4}>Empowering Communities, Transforming Lives</Heading>
           <Text fontSize="xl" mb={8}>Join us in making a difference in Africa. The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives.</Text>
           <Button colorScheme="teal" size="lg" mr={4} boxShadow="md" _hover={{ boxShadow: "lg" }}>Get Involved</Button>
@@ -17,13 +17,13 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Mission Statement */}
-      <Box py={10} textAlign="center" px={4}>
+      <Box py={[5, 10]} textAlign="center" px={[4, 8]}>
         <Heading as="h2" size="xl" mb={4}>Our Mission</Heading>
         <Text fontSize="lg" maxW="600px" mx="auto">The Humanitarian Foundation for Innovative Development in Africa (HUFIDA) is dedicated to empowering communities through sustainable development projects, education, and healthcare initiatives.</Text>
       </Box>
 
       {/* Impact Statistics */}
-      <Box py={10} bg="gray.100" textAlign="center" px={4}>
+      <Box py={[5, 10]} bg="gray.100" textAlign="center" px={[4, 8]}>
         <Heading as="h2" size="xl" mb={4}>Our Impact</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="200px" m={4}>
@@ -42,8 +42,8 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Quick Links */}
-      <Flex justify="center" py={10} bg="gray.100" px={4}>
-        <HStack spacing={10}>
+      <Flex justify="center" py={[5, 10]} bg="gray.100" px={[4, 8]}>
+        <HStack spacing={[5, 10]}>
           <VStack>
             <Icon as={FaDonate} boxSize={10} color="teal.500" />
             <Link href="#" fontSize="lg" fontWeight="bold">Donate</Link>
@@ -60,7 +60,7 @@ const Index: React.FC = () => {
       </Flex>
 
       {/* Featured Projects */}
-      <Box py={10} textAlign="center" px={4}>
+      <Box py={[5, 10]} textAlign="center" px={[4, 8]}>
         <Heading as="h2" size="xl" mb={4}>Featured Projects</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
@@ -82,7 +82,7 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Testimonials */}
-      <Box py={10} bg="gray.100" textAlign="center" px={4}>
+      <Box py={[5, 10]} bg="gray.100" textAlign="center" px={[4, 8]}>
         <Heading as="h2" size="xl" mb={4}>Testimonials</Heading>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4} textAlign="left">
@@ -104,7 +104,7 @@ const Index: React.FC = () => {
       </Box>
 
       {/* Footer */}
-      <Box py={10} bg="gray.800" color="white" textAlign="center" px={4}>
+      <Box py={[5, 10]} bg="gray.800" color="white" textAlign="center" px={[4, 8]}>
         <Flex justify="center" wrap="wrap">
           <Box maxW="300px" m={4}>
             <Heading as="h3" size="md" mb={4}>Contact Us</Heading>
@@ -124,7 +124,7 @@ const Index: React.FC = () => {
           <Box maxW="300px" m={4}>
             <Heading as="h3" size="md" mb={4}>Subscribe</Heading>
             <Text mb={2}>Get the latest updates and news.</Text>
-            <Button colorScheme="teal">Subscribe</Button>
+            <Button colorScheme="teal" boxShadow="md" _hover={{ boxShadow: "lg" }}>Subscribe</Button>
           </Box>
         </Flex>
         <Divider my={4} />
