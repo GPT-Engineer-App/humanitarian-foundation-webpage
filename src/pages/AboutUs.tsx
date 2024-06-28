@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Text, Image, VStack, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, VStack, Flex, Icon } from "@chakra-ui/react";
 
 const AboutUs: React.FC = () => {
   return (

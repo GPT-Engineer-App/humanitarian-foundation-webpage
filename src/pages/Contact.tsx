@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Text, VStack, FormControl, FormLabel, Input, Textarea, Button, HStack, Icon, Link } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
